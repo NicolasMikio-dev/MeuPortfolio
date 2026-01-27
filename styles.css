@@ -155,8 +155,9 @@ body {
 
 @media (max-width: 768px) {
     .minha-nav {
-        position: relative !important; /* No celular, ela não precisa ser fixa para não cobrir o conteúdo */
-        padding: 10px;
+        position: relative !important; 
+        height: auto !important;
+        padding-bottom: 20px;
     }
 
     .minha-nav .nav {
@@ -164,9 +165,12 @@ body {
     }
 
     .btn-custom {
-        padding: 5px 10px; /* Diminui o tamanho do botão no celular */
-        font-size: 12px;
-        margin-bottom: 5px; /* Espaço entre botões empilhados */
+        padding: 12px 20px !important; /* Mais preenchimento para facilitar o clique */
+        font-size: 14px !important;    /* Texto um pouco maior */
+        display: block;               /* Faz os botões ocuparem a largura necessária */
+        width: 90%;                   /* Quase toda a largura da tela */
+        margin: 10px auto !important; /* Centraliza e dá espaço entre eles */
+        text-align: center;
     }
 
     /* Ajusta o espaçamento do conteúdo que antes ficava embaixo da nav fixa */
