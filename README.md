@@ -20,9 +20,12 @@
 
 ## Navegação Inteligente: Uma barra de navegação (navbar) que se esconde ao rolar para baixo e reaparece ao subir, mudando sua transparência para melhor visibilidade do conteúdo.
 
+
 ## Galeria de Certificados: Visualização de conquistas acadêmicas com funcionalidade de zoom via modal ao clicar na imagem.
 
+
 ## Seção de Hobbies e Interesses: Espaço dedicado a apresentar gostos pessoais, como música (baixo e violão) e literatura.
+
 
 ## Curadoria Musical: Uma página específica listando álbuns favoritos nacionais e internacionais com descrições detalhadas.
 
