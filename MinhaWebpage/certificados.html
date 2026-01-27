@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Certificados</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link href="styles.css" rel="stylesheet">
+    <link href="certificados.css" rel="stylesheet">
+</head>
+
+
+<body style="margin-top: 10px">
+
+    <div class="modal fade" id="certificadoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" id="modalImg" class="img-fluid" alt="Certificado Ampliado">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-dark minhaWB">
+
+        <div class="header">
+            <h1>Minha Webpage</h1>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <nav id="navbar" class="navbar navbar-dark minha-nav fixed-top" style="margin-top: 0px;">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                <a class="btn-custom mr-2" href="index.html">Página Principal</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn-custom mr-2" href="musica.html">Músicas</a>
+            </li>
+            
+            </ul>
+        </nav>
+
+        <div class="container" style="margin-top: -5px;">
+
+            <h2 class="text-center">Meus Certificados</h2>
+            <hr>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="img/Certificado - Harvard.png" class="card-img-top img-certificado img-clicavel"
+                            alt="Certificado CS50" style="cursor: pointer;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">CS50 - Harvard - 2025</h5>
+                            <p class="card-text">Curso de introdução à ciência da computação com desenvolvimento de
+                                projetos
+                                e aplicações em diversas linguagens e ferramentas, por exemplo: Python, Linguagem C,
+                                Javascript, HTML, CSS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+                <img src="img/Certificado - Harvard.png" class="card-img-top img-certificado img-clicavel" alt="Certificado CS50" style="cursor: pointer;">
+                -->
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="img/certificado - oracleCloud.png"  class="card-img-top img-certificado img-clicavel"
+                            alt="Certificado Oracle Cloud" style="cursor: pointer;">
+                        <div class="card-body">
+                            <h5 class="card-title">Cloud Infrastructure - Oracle - 12/11/2025</h5>
+                            <p class="card-text">Curso de infraestrura de nuvem. A porta de entrada oficial para o
+                                ecossistema de nuvem da
+                                Oracle e valida minha compreensão sobre os pilares fundamentais da tecnologia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="img/certificado - bradescoSegTI.png"  class="card-img-top img-certificado img-clicavel"
+                            alt="Certificado Bradesco segurança TI" style="cursor: pointer;">
+                        <div class="card-body">
+                            <h5 class="card-title">Segurança em TI - Bradesco - 04/09/2025</h5>
+                            <p class="card-text">Curso para compreender os aspectos fundamentais de segurança em TI e,
+                                também, boas práticas para combater riscos e ataques virtuais.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="img/Santander - Excel.png" class="card-img-top img-certificado img-clicavel"
+                            alt="Certificado CS50" style="cursor: pointer;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Excel - Santander - 23/01/2026</h5>
+                            <p class="card-text">Curso fundamental para quem quer compreender a ferramenta Excel, neste
+                                curso aprendi atalhos e boas práticas para fazer bom uso do programa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="img/alura - dadoscpython.jpeg"  class="card-img-top img-certificado img-clicavel"
+                        alt="Certificado Alura Imersão dados com python" style="cursor: pointer;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Dados com python - Alura - 18/08/2025</h5>
+                            <p class="card-text">Imersão focada em transformar dados brutos em insights reais.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="img/alura - devops.jpeg"  class="card-img-top img-certificado img-clicavel"
+                        alt="Certificado Alura Imersão DevOps" style="cursor: pointer;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Cloud DevOps - Alura - 16/07/2025</h5>
+                            <p class="card-text">Nessa imersão o foco vai para a infraestrutura e entrega.
+                                É sobre como garantir que o software chegue ao usuário de forma rápida e segura.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+        </div>
+
+
+        <footer class="footer-custom text-center">
+
+
+            <div class="rodape">
+                <span class="text-muted">/* "Desenvolvido por Nicolas Mikio" */</span>
+            </div>
+            <br>
+
+
+            <img src="img/rodapeIMG.jpg" class="img-do-rodape">
+
+        </footer>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    const imagens = document.querySelectorAll('.img-clicavel');
+    const modalImg = document.getElementById('modalImg');
+
+    imagens.forEach(img => {
+        img.addEventListener('click', function () {
+            // Pega o caminho da imagem clicada e joga no modal
+            const src = this.getAttribute('src');
+            modalImg.setAttribute('src', src);
+            // Abre o modal manualmente via JQuery (necessário no Bootstrap 4)
+            $('#certificadoModal').modal('show');
+        });
+    });
+
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Lógica para esconder/mostrar
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            navbar.style.top = "-100px"; // Esconde ao descer
+        } else {
+            navbar.style.top = "0";      // Mostra ao subir
+        }
+
+        // Lógica para transparência
+        if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, false);
+</script>
