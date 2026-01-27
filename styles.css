@@ -1,5 +1,6 @@
 /* 1. RESET E CONFIGURAÇÕES GERAIS */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -13,11 +14,22 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     text-align: left;
-    padding-top: 0; /* Ajustado para não criar buracos brancos */
+    padding-top: 0;
+    /* Ajustado para não criar buracos brancos */
 }
 
 /* 2. TIPOGRAFIA */
-body, p, h1, h2, h3, h4, h5, h6, span, a, div {
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+div {
     font-family: "Source Code Pro", monospace !important;
     font-weight: 400;
 }
@@ -36,13 +48,14 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, div {
 
 .minha-nav.scrolled {
     background-color: rgba(0, 0, 0, 0.95) !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .minhaWB {
     background-color: #000000;
     margin-bottom: 2rem;
-    padding: 5rem 2rem 3rem 2rem; /* Padding superior maior para compensar a nav fixa */
+    padding: 5rem 2rem 3rem 2rem;
+    /* Padding superior maior para compensar a nav fixa */
 }
 
 .minhaWB h1 {
@@ -72,7 +85,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, div {
     background-color: #000;
     border-color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 5. CONTEÚDO PRINCIPAL */
@@ -102,35 +115,39 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, div {
 }
 
 /* 7. AJUSTES MOBILE (AQUI ESTÁ A SOLUÇÃO) */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .minha-nav {
         position: relative !important;
         height: auto !important;
         padding: 15px 0 !important;
     }
 
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.95); /* Fundo escuro para o menu aberto */
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
     .minha-nav .nav-pills {
         flex-direction: column;
         align-items: center;
-        display: flex !important; /* Garante o alinhamento central */
+        display: flex !important;
+        /* Garante o alinhamento central */
     }
 
     .nav-item {
-        width: 100%; /* Garante que o item da lista ocupe a largura total */
+        width: 100%;
+        /* Garante que o item da lista ocupe a largura total */
         display: flex;
         justify-content: center;
     }
 
     .btn-custom {
-        /* O segredo está aqui: diminuir o padding vertical e manter o horizontal */
-        padding: 8px 25px !important; 
-        font-size: 14px !important;
-        width: 70% !important; /* Reduzi um pouco para não tocar as bordas da tela */
-        height: auto !important; /* Impede que ele estique verticalmente */
-        margin: 5px auto !important;
+        display: block !important;
+        width: 100%;
         text-align: center;
-        border-radius: 50px !important; /* Mantém o formato de pílula sem virar um círculo */
-        display: block;
+        margin-bottom: 10px;
     }
 
     .minhaWB {
