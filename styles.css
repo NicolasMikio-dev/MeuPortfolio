@@ -2,62 +2,49 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita barras de rolagem horizontais */
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
 body {
-    /* Degradê de um lado ao outro (Esquerda para Direita) */
     background: linear-gradient(to right, #000000 0%, #ffffff 100%);
     background-attachment: fixed;
-    
-    /* Cor padrão do texto e alinhamento */
     color: #000000;
     font-size: 1rem;
     line-height: 1.5;
     text-align: left;
+    padding-top: 0; /* Ajustado para não criar buracos brancos */
 }
 
-/* 2. TIPOGRAFIA (FORÇANDO A FONTE EM TUDO) */
-/* Usamos !important para garantir que o Bootstrap não sobrescreva sua escolha */
-body, p, h2, h3, h4, h5, h6, span, a, div {
+/* 2. TIPOGRAFIA */
+body, p, h1, h2, h3, h4, h5, h6, span, a, div {
     font-family: "Source Code Pro", monospace !important;
     font-weight: 400;
-    font-style: normal;
 }
 
-/* 3. NAVBAR E HEADER (Minha Webpage) */
+/* 3. NAVBAR E HEADER */
 .minha-nav {
     background-color: #000000 !important;
     backdrop-filter: blur(10px);
-    position: fixed; /* Fixa no topo */
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1030;
     transition: all 0.4s ease;
-    
+    padding: 10px 0;
 }
 
 .minha-nav.scrolled {
-    background-color: #000000 !important; /* Fica preta sólida ao rolar */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Adiciona uma sombra para destacar */
-}
-
-body {
-    padding-top: 30px; 
-}
-
-.minha-nav .nav-link {
-    color: #ffffff !important;
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .minhaWB {
     background-color: #000000;
     margin-bottom: 2rem;
-    padding: 3rem 2rem;
+    padding: 5rem 2rem 3rem 2rem; /* Padding superior maior para compensar a nav fixa */
 }
 
-/* Título principal com a fonte Roboto Mono */
 .minhaWB h1 {
     font-family: "Roboto Mono", monospace !important;
     font-weight: 700 !important;
@@ -65,116 +52,85 @@ body {
     margin: 0;
 }
 
-/* 4. CONTEÚDO PRINCIPAL (Seções do Portfólio) */
+/* 4. BOTÕES CUSTOMIZADOS */
+.btn-custom {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: 2px solid #727272;
+    background-color: #727272;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+    border-radius: 400px;
+    cursor: pointer;
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+.btn-custom:hover {
+    background-color: #000;
+    border-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 5. CONTEÚDO PRINCIPAL */
 .container {
-    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco semi-transparente para leitura */
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 8px;
-    margin-top: 20px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
 }
 
-h2 {
-    font-weight: 700;
-    margin-top: 1.5rem;
-    color: #212529;
-}
-
-/* 5. RODAPÉ E IMAGEM */
+/* 6. RODAPÉ */
 .footer-custom {
-   
-    padding: 0;
     width: 100%;
-}
-
-.rodape {
-    
-    margin-bottom: 20px;
-    
+    padding-bottom: 20px;
 }
 
 .rodape span {
-    color: #53b8d3 !important; /* Troque o #ffffff pela cor que você desejar */
+    color: #53b8d3 !important;
 }
 
 .img-do-rodape {
-    bottom: 0;
-    width: 100%;        
-    max-width: 100%;      
-    height: 100%;
-    display: block;
-    margin: 0 auto;       
+    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
 
-body {
-    padding-bottom: 0px;
-}
-
-
-.header a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-custom {
-    font-family: "Source Code Pro", monospace !important;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 10px 17px;
-    border: 2px solid #727272; /* Cor da borda */
-    background-color: #727272;
-    color: #ffffff;
-    transition: all 0.3s ease;
-    border-radius: 400px;
-    cursor: pointer;
-}
-
-.btn-custom:hover {
-    background-color: #000; /* Preenche ao passar o mouse */
-    color: #fff; /* Inverte a cor do texto */
-    text-decoration: none;
-    transform: translateY(-3px); /* Leve "pulo" para cima */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.btn-custom-light {
-    border: 2px solid #fff;
-    color: #fff;
-    background-color: transparent;
-}
-
-.btn-custom-light:hover {
-    background-color: #fff;
-    color: #000;
-}
-
+/* 7. AJUSTES MOBILE (AQUI ESTÁ A SOLUÇÃO) */
 @media (max-width: 768px) {
     .minha-nav {
-        position: relative !important; 
+        position: relative !important; /* Remove a fixação para não sobrepor */
         height: auto !important;
-        padding-bottom: 20px;
+        padding: 20px 0 !important;
     }
 
-    .minha-nav .nav {
-        justify-content: center; /* Centraliza os botões */
+    .minha-nav .nav-pills {
+        flex-direction: column; /* Botões um embaixo do outro */
+        align-items: center;
+        width: 100%;
     }
 
     .btn-custom {
-        padding: 12px 20px !important; /* Mais preenchimento para facilitar o clique */
-        font-size: 14px !important;    /* Texto um pouco maior */
-        display: block;               /* Faz os botões ocuparem a largura necessária */
-        width: 90%;                   /* Quase toda a largura da tela */
-        margin: 10px auto !important; /* Centraliza e dá espaço entre eles */
+        padding: 15px 0 !important; /* Aumenta a altura para o toque */
+        font-size: 16px !important;
+        width: 90%; /* Ocupa quase a tela toda */
+        margin: 10px 0 !important;
         text-align: center;
     }
 
-    /* Ajusta o espaçamento do conteúdo que antes ficava embaixo da nav fixa */
+    .minhaWB {
+        padding: 2rem 1rem !important;
+        margin-top: 0 !important;
+        text-align: center;
+    }
+
     .container {
-        margin-top: 20px !important; 
+        margin-top: 10px !important;
+        padding: 15px;
     }
 }
