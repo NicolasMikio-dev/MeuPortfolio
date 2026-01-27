@@ -67,3 +67,12 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .img-certificado {
+        height: auto; /* Deixa a imagem do certificado proporcional no celular */
+    }
+}

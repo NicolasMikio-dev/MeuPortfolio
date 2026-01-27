@@ -152,3 +152,25 @@ body {
     background-color: #fff;
     color: #000;
 }
+
+@media (max-width: 768px) {
+    .minha-nav {
+        position: relative !important; /* No celular, ela não precisa ser fixa para não cobrir o conteúdo */
+        padding: 10px;
+    }
+
+    .minha-nav .nav {
+        justify-content: center; /* Centraliza os botões */
+    }
+
+    .btn-custom {
+        padding: 5px 10px; /* Diminui o tamanho do botão no celular */
+        font-size: 12px;
+        margin-bottom: 5px; /* Espaço entre botões empilhados */
+    }
+
+    /* Ajusta o espaçamento do conteúdo que antes ficava embaixo da nav fixa */
+    .container {
+        margin-top: 20px !important; 
+    }
+}
