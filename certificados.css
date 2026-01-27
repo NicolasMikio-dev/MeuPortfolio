@@ -25,54 +25,44 @@
     }
 }
 
-/* Remove o espaço em branco (padding) dentro do modal */
+/* Modal e Imagens Ampliadas */
 #certificadoModal .modal-body {
     padding: 0 !important;
-    background-color: #000; /* Fundo preto ajuda a destacar o certificado */
+    background-color: #000; 
 }
 
-/* Garante que a imagem ampliada não herde o corte (object-fit) do card */
 #modalImg {
     width: 100%;
-    height: auto;      /* Mantém a proporção original do certificado */
-    object-fit: contain; /* Garante que a imagem inteira apareça */
-    border-radius: 0;   /* Remove arredondamento no modal para ganhar espaço */
+    height: auto;      
+    object-fit: contain; 
+    border-radius: 0;   
 }
 
-/* Remove a borda e o fundo padrão do conteúdo do modal */
 .modal-content {
     border: none !important;
     background: transparent !important;
 }
 
 .modal {
-    z-index: 2000 !important; /* Valor alto para ficar acima da navbar */
+    z-index: 2000 !important; 
 }
 .modal-backdrop {
     z-index: 1999 !important;
 }
 
-.minha-nav {
-    position: fixed !important;;
-    top: 0;
-    width: 100%;
-    transition: top 0.3s ease-in-out; 
-    z-index: 1000;
-    background-color: 0.3s ease;
-    background-color: transparent;
-}
-
-.minha-nav.scrolled {
-    background-color: rgba(0, 0, 0, 0.9) !important; /* Fundo preto com leve transparência */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
+/* Ajustes Mobile Específicos para Certificados */
 @media (max-width: 768px) {
     .card {
         margin-bottom: 20px;
     }
     
     .img-certificado {
-        height: auto; /* Deixa a imagem do certificado proporcional no celular */
+        height: auto; /* Mantém a proporção da imagem no celular */
+        object-fit: contain;
+    }
+
+    .titulo-certificado {
+        font-size: 1.2rem;
+        text-align: center;
     }
 }

@@ -104,29 +104,38 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, div {
 /* 7. AJUSTES MOBILE (AQUI ESTÁ A SOLUÇÃO) */
 @media (max-width: 768px) {
     .minha-nav {
-        position: relative !important; /* Remove a fixação para não sobrepor */
+        position: relative !important;
         height: auto !important;
-        padding: 20px 0 !important;
+        padding: 15px 0 !important;
     }
 
     .minha-nav .nav-pills {
-        flex-direction: column; /* Botões um embaixo do outro */
+        flex-direction: column;
         align-items: center;
-        width: 100%;
+        display: flex !important; /* Garante o alinhamento central */
+    }
+
+    .nav-item {
+        width: 100%; /* Garante que o item da lista ocupe a largura total */
+        display: flex;
+        justify-content: center;
     }
 
     .btn-custom {
-        padding: 15px 0 !important; /* Aumenta a altura para o toque */
-        font-size: 16px !important;
-        width: 90%; /* Ocupa quase a tela toda */
-        margin: 10px 0 !important;
+        /* O segredo está aqui: diminuir o padding vertical e manter o horizontal */
+        padding: 8px 25px !important; 
+        font-size: 14px !important;
+        width: 70% !important; /* Reduzi um pouco para não tocar as bordas da tela */
+        height: auto !important; /* Impede que ele estique verticalmente */
+        margin: 5px auto !important;
         text-align: center;
+        border-radius: 50px !important; /* Mantém o formato de pílula sem virar um círculo */
+        display: block;
     }
 
     .minhaWB {
-        padding: 2rem 1rem !important;
-        margin-top: 0 !important;
-        text-align: center;
+        padding: 1.5rem 1rem !important;
+        margin-bottom: 1rem !important;
     }
 
     .container {
