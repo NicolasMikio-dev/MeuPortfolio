@@ -66,3 +66,16 @@
         text-align: center;
     }
 }
+
+.img-curriculo {
+    width: 100%;          
+    height: auto;         /* Isso permite que a altura cresça com a largura */
+    object-fit: contain;  /* Garante que a imagem inteira apareça sem cortes */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.img-curriculo:hover {
+    transform: scale(1.05);
+}
